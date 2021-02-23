@@ -3,7 +3,7 @@ import csv
 import pdb
 ###################
 # Loading the Slave Mako template
-mytemplate = Template(filename='slave_template.v.mako',module_directory='../../Register_Verification/mako-templates')
+mytemplate = Template(filename='slave_template.v.mako',module_directory='../../Register-Verification/mako-templates')
 
 # Declaring Variables
 registers = []
@@ -18,7 +18,7 @@ field_size = []
 st2 = '';st3 = ''
 
 # Loading the CSV file and passing the info to MAKO
-with open('../../Register_Verification/demo_reg.csv', mode='r') as csv_file:
+with open('../../Register-Verification/demo_reg.csv', mode='r') as csv_file:
     csv_reader = csv.DictReader(csv_file)
     for row in csv_reader:
     	if f'{row["#"]}' != '#':
